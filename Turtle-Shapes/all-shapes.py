@@ -1,6 +1,8 @@
 from turtle import *
 
-def square(size, fill, color):
+def square(size, color):
+    turtle.begin_fill()
+    turtle.color(color)
     forward(size)
     right(90)
     forward(size)
@@ -8,18 +10,23 @@ def square(size, fill, color):
     forward(size)
     right(90)
     forward(size)
-    color(color)
-    fill(fill)
-square(100, True, "blue")
+    turtle.end_fill()
+square(100, "blue")
 
-def triangle(size, fill, color):
+def triangle(size, color):
+    turtle.begin_fill()
+    turtle.color(color)
     forward(size)
     right(120)
     forward(size)
     right(120)
     forward(size)
+    turtle.end_fill()
+triangle(25, "red")
 
-def pentagon(size, fill, color):
+def pentagon(size, color):
+    turtle.begin_fill()
+    turtle.color(color)
     forward(size)
     right(72)
     forward(size)
@@ -29,8 +36,12 @@ def pentagon(size, fill, color):
     forward(size)
     right(72)
     forward(size)
+    turtle.end_fill()
+pentagon(50, "purple")
 
-def hexagon(size, fill, color):
+def hexagon(size, color):
+    turtle.begin_fill()
+    turtle.color(color)
     forward(size)
     right(60)
     forward(size)
@@ -42,8 +53,12 @@ def hexagon(size, fill, color):
     forward(size)
     right(60)
     forward(size)
+    turtle.end_fill()
+hexagon(75, "yellow")
 
-def octagon(size, fill, color):
+def octagon(size, color):
+    turtle.begin_fill()
+    turtle.color(color)
     forward(size)
     right(45)
     forward(size)
@@ -61,13 +76,23 @@ def octagon(size, fill, color):
     forward(size)
     right(45)
     forward(size)
+    turtle.end_fill()
+octagon(80, "orange")
 
-def star(size, fill, color):
+def star(size, color):
+    turtle.begin_fill()
+    turtle.color(color)
     for i in range(5):
         forward(size)
         right(144)
+    turtle.end_fill()
+star(155, "green")
 
-def circle(size, fill, color):
+def circle(size, color):
+    turtle.begin_fill()
+    turtle.color(color)
     width(size)
     circle(180)
+    turtle.end_fill()
+circle(132, "yellow")
 
